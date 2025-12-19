@@ -33,7 +33,7 @@ def chat_session(db):
 class TestChatBot:
 
     def test_session_creation(self, client):
-        """Перевірка створення сесії та коду 200"""
+
         url = reverse('process_prompt')
         data = {"prompt": "Hello", "session_id": "new_session"}
 

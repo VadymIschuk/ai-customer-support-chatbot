@@ -30,12 +30,6 @@ GEMINI_API_KEY = require_env("GEMINI_API_KEY")
 if not DB_PORT.isdigit():
     raise ImproperlyConfigured("DB_PORT must contain digits only")
 
-
-SECRET_KEY = 'django-insecure-i%j&iv(gc_5stf59m5#d+xw1uk05mdv^1_-)+45t_fg+zf01&q'
-
-
-DEBUG = True
-
 ALLOWED_HOSTS = []
 
 

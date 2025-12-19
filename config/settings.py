@@ -12,6 +12,7 @@ def require_env(name):
         raise ImproperlyConfigured(f"Missing required environment variable: {name}")
     return val
 
+
 debug_value = require_env("DJANGO_DEBUG")
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -30,15 +31,12 @@ if not DB_PORT.isdigit():
     raise ImproperlyConfigured("DB_PORT must contain digits only")
 
 
-
 SECRET_KEY = 'django-insecure-i%j&iv(gc_5stf59m5#d+xw1uk05mdv^1_-)+45t_fg+zf01&q'
 
 
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
-
 
 
 INSTALLED_APPS = [
@@ -88,7 +86,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'config.wsgi.application'
 
 
-
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
@@ -99,7 +96,6 @@ DATABASES = {
         "PORT": DB_PORT,
     }
 }
-
 
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -116,7 +112,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 
 
 LANGUAGE_CODE = 'en-us'
